@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (isset($_SESSION['pro'])) {
+		unset($_SESSION['pro']);
+	}
+?>
+
 <html>
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -20,7 +27,7 @@
 		<span id="protext">
 			PRO	
 		</span>
-		<form action="" id="proform">
+		<form id="proform">
 				<input type="text" id="procode" name="procode" placeholder="Enter Pro Code">
 		</form>
 	</div>

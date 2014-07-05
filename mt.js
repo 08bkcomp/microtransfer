@@ -13,6 +13,7 @@ function FileDragHover(e){
 function FileUploadHandler(e){
 	e.stopPropagation();
 	e.preventDefault();
+	$("#proform").trigger('submit');
 	FileDragHover(e);
 	e.dataTransfer = e.originalEvent.dataTransfer;
 	var file = e.dataTransfer.files[0];
@@ -52,7 +53,9 @@ $("#proform").on('submit', function(e) {
 	request.send(formData);
 	request.onload = function () {
 		if (request.status == 200) {
-
+			if(request.responseText != "Found"){
+				$("#procode").val("");
+			};
 		} else {
 			window.alert("Error " + request.status + " occurred");
 		};

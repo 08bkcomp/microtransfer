@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_FILES) {
 		if ($_FILES['upfile']['size'] <= 10485760 && !($_FILES['upfile']['type'] == 'application/x-php')) {
 			//upload stuff
@@ -8,12 +9,12 @@
 			if(!$link){
 				die('Conn fail: ' . $link->error());
 			}
-			$sql = "INSERT INTO files (codehash, name, time) VALUES (?, ?, ?)";
+			$sql = "INSERT INTO files (codehash, name, type, time) VALUES (?, ?, ?, ?)";
 			$stmt = $link->prepare($sql);
 			do {
 				$code = hash('sha512', $_FILES['upfile']['name'].time());
 				$truncode = preg_replace('/\s+?(\S+)?$/', '', substr($code, 0, 15));
-				$stmt->bind_param('sss', hash('sha512', $truncode), $_FILES['upfile']['name'], date('Y-m-d H:i:s'));
+				$stmt->bind_param('ssss', hash('sha512', $truncode), $_FILES['upfile']['name'], $_SESSION['pro'], date('Y-m-d H:i:s'));
 				$stmt->execute();
 			} while (mysqli_stmt_error($stmt));
 			
