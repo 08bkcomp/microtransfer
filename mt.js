@@ -42,6 +42,23 @@ function FileUploadHandler(e){
 	}
 }
 
+$("#proform").on('submit', function(e) {
+	e.preventDefault();
+	/* Act on the event */
+	var formData  = new FormData();
+	formData.append("procode", $("#procode").val());
+	var request  = new XMLHttpRequest();
+	request.open("POST", "procheck.php");
+	request.send(formData);
+	request.onload = function () {
+		if (request.status == 200) {
+
+		} else {
+			window.alert("Error " + request.status + " occurred");
+		};
+	};
+});
+
 $("#pro").on('click', function(e) {
 	e.preventDefault();
 	/* Act on the event */
