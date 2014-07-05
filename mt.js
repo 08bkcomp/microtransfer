@@ -42,13 +42,6 @@ function FileUploadHandler(e){
 	}
 }
 
-$("#pro").on('click', function(e) {
-	e.preventDefault();
-	/* Act on the event */
-	$(this).addClass('expanded');
-	$("#proform").show();
-});
-
 $("#downform").keyup(function(event) {
 	/* Act on the event */
 	if(event.keycode == 13){
