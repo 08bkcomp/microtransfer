@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+div {
+	height: 100%;
+	width: 100%;
+	display: table;
+	text-align: center;
+}
+
+a {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 3em;
+	font-family: 'Roboto Condensed', sans-serif;
+}

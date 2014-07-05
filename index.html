@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="mt.css">
+</head>
+<body>
+	<div id='main'>
+		<section id="uparea">
+			<form action="upload.php" method="post" id="upform">
+				<div id="droparea"><span id="droptext">Drop Files Here</span></div>
+			</form>
+		</section>
+		<section id="downarea">
+			<form method="post" id="downform" action="download.php">
+				<input type="text" name="downcode" id="codebox" placeholder="Enter Download Code" autocomplete="off">
+			</form>
+		</section>
+	</div>
+	<div id="pro">
+		<span id="protext">
+			PRO	
+		</span>
+		<form action="" id="proform">
+				<input type="text" id="procode" name="procode" placeholder="Enter Pro Code">
+		</form>
+	</div>
+	<script src="mt.js"></script>
+</body>
+</html>

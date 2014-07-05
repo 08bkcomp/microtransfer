@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+html {
+	height:100%;
+}
+
+body {
+	height: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+section {
+	position: relative;
+	height: 100%;
+}
+
+form {
+	margin: 0;
+}
+
+#uparea {
+	width: 50%;
+	float: left;
+	background-color: #53C7F5;
+}
+
+#downarea {
+	width: 50%;
+	float: right;
+	text-align: center;
+	display: table;
+}
+
+#droparea {
+	background-color: #45B6E5;
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+.hover {
+	background-color: #45B6E5;
+	height: 100%;
+	width: 100%;
+	display: table;
+	background-color: #70E0D3;
+}
+
+#droparea.success {
+	background-color: #45B6E5;
+	height: 100%;
+	width: 100%;
+	display: table;
+	background-color: #00CC99;	
+}
+
+#droptext {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 3em;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#downform {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#codebox {
+	/*display: block;*/
+	margin: 0 auto;
+    border: none;
+    color: #333;
+    background: transparent;
+    border-bottom: 1.5px solid #D0D0D0;
+    padding: 5px 2px 0 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+	font-size: 3em;
+}
+
+#pro {
+	height: 50px;
+	width:50px;
+	background-color: #0066CC;
+	position: absolute;
+	display: table;
+}
+
+#protext {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#pro.expanded {
+	width: 50%;
+}
+
+
+#proform {
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#procode {
+	/*display: block;*/
+	margin: 0 auto 10px;
+    border: none;
+    color: #333;
+    background: transparent;
+    border-bottom: 1.5px solid #D0D0D0;
+    padding: 5px 2px 0 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+}
